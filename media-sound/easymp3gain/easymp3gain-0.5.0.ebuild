@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-S="easymp3gain-gtk2_0.5.0_amd64"
+S="easymp3gain-gtk2_0.5.0-1_amd64"
 
 DEPEND=">=dev-lang/fpc-2.4.0
 	>=dev-lang/lazarus-0.9.28"
