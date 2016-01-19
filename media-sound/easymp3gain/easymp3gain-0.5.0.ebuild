@@ -21,6 +21,14 @@ DEPEND=">=dev-lang/fpc-2.4.0
 	>=dev-lang/lazarus-0.9.28"
 RDEPEND="x11-libs/gtk+:2"
 
-src_prepare(){
-	epatch "${FILESDIR}"/${P}-desktop.patch
+#src_prepare(){
+#	epatch "${FILESDIR}"/${P}-desktop.patch
+#}
+
+src_install() {
+    emake DESTDIR="${D}" install
+
+#    doicon sylpheed.png
+#    domenu sylpheed.desktop
+
 }
