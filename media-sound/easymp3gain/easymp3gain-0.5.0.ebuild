@@ -21,12 +21,33 @@ DEPEND=">=dev-lang/fpc-2.4.0
 	>=dev-lang/lazarus-0.9.28"
 RDEPEND="x11-libs/gtk+:2"
 
+pkg_nofetch() {
+    eerror "Please contact Kurtz for tar.gz package to copy in distfiles directory."
+}
+
 #src_prepare(){
 #	epatch "${FILESDIR}"/${P}-desktop.patch
 #}
 
 src_install() {
-    emake DESTDIR="${D}" install
+	#${WORKDIR}
+
+    dodir /usr/share/easymp3gain
+
+    insinto /usr/share/easymp3gain
+    #doins -r "${S}/*" "/"
+
+    doins -r "${S}/icons/" "/"
+	doins -r "${S}/lang/" "/"
+	doins -r "${S}/help/" "/"
+	doins "${S}/easymp3gain" "/"
+	doins "${S}/RELEASE.txt" "/"
+	doins "${S}/README.txt" "/"
+	doins "${S}/CHANGELOG.txt" "/"
+	doins "${S}/AUTHORS" "/"
+
+    #insinto /usr/share/applications
+    #newins "${S}/applications/easymp3gain.desktop" "easymp3gain.desktop"
 
 #    doicon sylpheed.png
 #    domenu sylpheed.desktop
