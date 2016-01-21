@@ -1,6 +1,6 @@
---- applications/easymp3gain.desktop.old	2010-01-12 17:57:30.000000000 +0100
-+++ applications/easymp3gain.desktop	2012-09-10 08:30:23.120759782 +0200
-@@ -7,6 +7,6 @@
+--- applications/easymp3gain.desktop.original	2016-01-21 13:21:45.700301675 +0100
++++ applications/easymp3gain.desktop	2016-01-21 13:39:27.966296443 +0100
+@@ -8,7 +8,7 @@
  Comment[de]=Eine GUI für mp3gain, vorbisgain und aacgain
  Comment[it]=Una GUI per mp3gain, vorbisgain e aacgain
  Comment[fr]=Une GUI pour mp3gain, vorbisgain et aacgain
@@ -9,3 +9,4 @@
  Icon=easymp3gain
 -Categories=Audio;AudioVideo
 +Categories=Audio;AudioVideo;
+ 

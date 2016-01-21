@@ -25,9 +25,10 @@ pkg_nofetch() {
     eerror "Please contact Kurtz for tar.gz package to copy in distfiles directory."
 }
 
-#src_prepare(){
-#	epatch "${FILESDIR}"/${P}-desktop.patch
-#}
+src_prepare(){
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-desktop.patch"
+}
 
 src_install() {
 	#${WORKDIR}
@@ -46,8 +47,8 @@ src_install() {
 	doins "${S}/CHANGELOG.txt" "/"
 	doins "${S}/AUTHORS" "/"
 
-    #insinto /usr/share/applications
-    #newins "${S}/applications/easymp3gain.desktop" "easymp3gain.desktop"
+    insinto /usr/share/applications
+    newins "${S}/applications/easymp3gain.desktop" "easymp3gain.desktop"
 
 #    doicon sylpheed.png
 #    domenu sylpheed.desktop
