@@ -33,9 +33,9 @@ src_prepare(){
 src_install() {
 	#${WORKDIR}
 
-    dodir /usr/share/easymp3gain
+    dodir /opt/easymp3gain
 
-    insinto /usr/share/easymp3gain
+    insinto /opt/easymp3gain
     #doins -r "${S}/*" "/"
 
     doins -r "${S}/icons/" "/"
@@ -46,6 +46,8 @@ src_install() {
 	doins "${S}/README.txt" "/"
 	doins "${S}/CHANGELOG.txt" "/"
 	doins "${S}/AUTHORS" "/"
+
+	dosym "/opt/easymp3gain/easymp3gain" "/usr/bin/easymp3gain"
 
     insinto /usr/share/applications
     newins "${S}/applications/easymp3gain.desktop" "easymp3gain.desktop"
