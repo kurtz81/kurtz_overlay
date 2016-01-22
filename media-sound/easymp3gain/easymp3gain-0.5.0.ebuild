@@ -42,6 +42,7 @@ src_install() {
 	doins -r "${S}/lang/" "/"
 	doins -r "${S}/help/" "/"
 	doins "${S}/easymp3gain" "/"
+	fperms 0755 "/opt/easymp3gain/easymp3gain"
 	doins "${S}/RELEASE.txt" "/"
 	doins "${S}/README.txt" "/"
 	doins "${S}/CHANGELOG.txt" "/"
